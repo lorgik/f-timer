@@ -28,7 +28,9 @@ export default function Home() {
       setRelaxTime(rTime)
     }
 
-    setTheme(localStorage.getItem('theme') || '{}')
+    if (localStorage.getItem('theme')) {
+      setTheme(localStorage.getItem('theme') || '{}')
+    }
   }, [])
 
   const timeSetting = (fTime: number, bTime: number, rTime: number) => {
