@@ -1,0 +1,20 @@
+.timer {
+  font-size: 15vh;
+  font-weight: 500;
+}
+
+.btn {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  padding: 15px 40px;
+  font-size: 3vh;
+  font-weight: 500;
+  border-radius: 7px;
+  min-width: 160px;
+
+  transition: all 0.05s ease-in;
+}
+
+.btn:active {
+  transform: translateY(2px);
+}

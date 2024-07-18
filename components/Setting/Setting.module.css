@@ -1,0 +1,112 @@
+.popup {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.setting {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  background-color: var(--color-white);
+  min-width: 40vw;
+  margin-top: 80px;
+  border-radius: 20px;
+  padding: 30px;
+  color: var(--color-black);
+
+  & .title {
+    margin-bottom: 10px;
+    text-align: center;
+    border-bottom: 2px solid var(--color-black);
+    padding-bottom: 20px;
+    font-weight: 700;
+  }
+
+  & .subtitle {
+    margin-top: 20px;
+  }
+
+  & .description {
+    margin-top: 20px;
+  }
+
+  & .inputs {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    & .fieldset {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      & .label {
+        font-size: 1.5vh;
+      }
+
+      & .input {
+        border: none;
+        background-color: #f1f1f1;
+        padding: 10px 10px;
+        max-width: 150px;
+        border-radius: 5px;
+        font-size: 2.25vh;
+      }
+    }
+  }
+
+  & .theme {
+    & .colors {
+      margin-top: 10px;
+      display: flex;
+      gap: 20px;
+
+      & .color {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        cursor: pointer;
+
+        transition: all 0.05s ease-in;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        &.active {
+          outline: 3px solid var(--color-black);
+        }
+      }
+    }
+  }
+
+  & .btn {
+    margin-top: 30px;
+    padding: 20px;
+    font-size: 2vh;
+    border-radius: 10px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+
+    transition: all 0.05s ease-in;
+  }
+}

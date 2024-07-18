@@ -1,0 +1,24 @@
+:root {
+  --color-primary: #595fe7;
+  --color-white: #fff;
+  --color-black: #172a35;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+
+  transition: background-color 0.05s ease-in;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
