@@ -40,6 +40,9 @@ const Timer = ({
       audioPunchRef.current.load()
       audioPunchRef.current.play()
     }
+    window.navigator.vibrate([
+      100, 30, 100, 30, 100, 200, 200, 30, 200, 30, 200, 200, 100, 30, 100, 30, 100,
+    ])
   }
 
   const isTimerEnd = Math.floor(timer / 1000) <= 0
