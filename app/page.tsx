@@ -57,6 +57,7 @@ export default function Home() {
     setIteration((prev) => prev + 1)
 
     if (audioRef.current) {
+      audioRef.current.load()
       audioRef.current.play()
     }
 

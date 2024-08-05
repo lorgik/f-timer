@@ -37,6 +37,7 @@ const Timer = ({
     }
 
     if (audioPunchRef.current) {
+      audioPunchRef.current.load()
       audioPunchRef.current.play()
     }
   }

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Chivo_Mono } from 'next/font/google'
-import './globals.css'
-import { useRef } from 'react'
+import './globals.scss'
 
 const rubik = Chivo_Mono({ subsets: ['latin'], weight: ['400', '500', '700'] })
 
