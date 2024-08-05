@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Setting from '@/components/Setting/Setting'
 import Timer from '@/components/Timer/Timer'
-import styles from './page.module.css'
+import styles from './page.module.scss'
 import Image from 'next/image'
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
   const [breakTime, setBreakTime] = useState(5)
   const [relaxTime, setRelaxTime] = useState(15)
   const [isSetting, setIsSetting] = useState(false)
-  const [theme, setTheme] = useState('FFB81A')
+  const [theme, setTheme] = useState('595fe7')
 
   const audioRef = useRef<HTMLAudioElement>(null)
 

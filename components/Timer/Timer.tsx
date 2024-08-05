@@ -1,6 +1,6 @@
 'use client'
 
-import styles from './Timer.module.css'
+import styles from './Timer.module.scss'
 import { useEffect, useRef, useState } from 'react'
 import { useNow } from '@/hooks/useNow'
 
@@ -41,7 +41,7 @@ const Timer = ({
     }
   }
 
-  const isTimerEnd = Math.floor(timer / 1000) === 0
+  const isTimerEnd = Math.floor(timer / 1000) <= 0
 
   useEffect(() => {
     if (isTimerEnd) {

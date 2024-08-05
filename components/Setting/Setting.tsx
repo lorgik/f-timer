@@ -1,7 +1,7 @@
 'use client'
 
 import { useOutsideClick } from '@/hooks/useOutsideClick'
-import styles from './Setting.module.css'
+import styles from './Setting.module.scss'
 import { useState } from 'react'
 
 const colors = ['595fe7', 'FFB81A', 'E32A40']
