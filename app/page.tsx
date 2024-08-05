@@ -6,6 +6,12 @@ import Timer from '@/components/Timer/Timer'
 import styles from './page.module.scss'
 import Image from 'next/image'
 
+enum Theme {
+  Blue = '595fe7',
+  Yellow = 'FFB81A',
+  Red = 'E32A40',
+}
+
 export default function Home() {
   const [status, setStatus] = useState('фокусировка')
   const [iteration, setIteration] = useState(1)
@@ -13,7 +19,7 @@ export default function Home() {
   const [breakTime, setBreakTime] = useState(5)
   const [relaxTime, setRelaxTime] = useState(15)
   const [isSetting, setIsSetting] = useState(false)
-  const [theme, setTheme] = useState('595fe7')
+  const [theme, setTheme] = useState<Theme | string>(Theme.Blue)
 
   const audioRef = useRef<HTMLAudioElement>(null)
 
