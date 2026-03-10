@@ -1,72 +1,72 @@
 .main {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 50px;
-  min-height: 100vh;
-  padding-top: 20px;
-
-  & .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-    min-width: 40vw;
-    padding-bottom: 20px;
-
-    & .btn {
-      color: var(--color-white);
-      background-color: rgba(255, 255, 255, 0.2);
-      padding: 10px 15px;
-      font-size: 1.75vh;
-      border-radius: 5px;
-
-      transition: all 0.05s ease-in;
-
-      &:active {
-        transform: translateY(2px);
-      }
-    }
-  }
-
-  & .card {
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 30px;
-    min-width: 40vw;
-    padding: 30px;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: var(--color-white);
-    border-radius: 20px;
+    gap: 50px;
+    min-height: 100vh;
+    padding-top: 20px;
 
-    @media screen and (max-width: 480px) {
-      min-width: 0px;
+    & .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        min-width: 40vw;
+        padding-bottom: 20px;
+
+        & .btn {
+            color: var(--color-white);
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 10px 15px;
+            font-size: 1.75vh;
+            border-radius: 5px;
+
+            transition: all 0.05s ease-in;
+
+            &:active {
+                transform: translateY(2px);
+            }
+        }
     }
 
-    & .tabs {
-      & .tab {
-        padding: 10px 15px;
-        font-size: 1.75vh;
-        border-radius: 5px;
-        background-color: transparent;
+    & .card {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 30px;
+        min-width: 40vw;
+        padding: 30px;
+        background-color: rgba(255, 255, 255, 0.2);
         color: var(--color-white);
-
-        transition: all 0.05s ease-in;
-
-        &:active {
-          transform: translateY(2px);
-        }
-
-        &.active {
-          background-color: var(--color-primary);
-        }
+        border-radius: 20px;
 
         @media screen and (max-width: 480px) {
-          font-size: 1.5vh;
+            min-width: 0px;
         }
-      }
+
+        & .tabs {
+            & .tab {
+                padding: 10px 15px;
+                font-size: 1.75vh;
+                border-radius: 5px;
+                background-color: transparent;
+                color: var(--color-white);
+
+                transition: all 0.05s ease-in;
+
+                &:active {
+                    transform: translateY(2px);
+                }
+
+                &.active {
+                    background-color: var(--color-primary);
+                }
+
+                @media screen and (max-width: 480px) {
+                    font-size: 1.5vh;
+                }
+            }
+        }
     }
-  }
 }

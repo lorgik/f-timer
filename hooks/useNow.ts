@@ -1,29 +1,29 @@
 import { useLayoutEffect, useRef, useState } from 'react'
 
-function useNow(updateInterval: number, enabled: any, cb?: any) {
-  const cbRef = useRef(cb)
-  cbRef.current = cb
-  const [now, setNow] = useState(Date.now())
+function useNow(updateInterval: number, enabled?: boolean, cb?: (timestamp: number) => void) {
+    const cbRef = useRef(cb)
+    cbRef.current = cb
+    const [now, setNow] = useState(Date.now())
 
-  useLayoutEffect(() => {
-    if (!enabled) {
-      return
-    }
+    useLayoutEffect(() => {
+        if (!enabled) {
+            return
+        }
 
-    setNow(Date.now())
-    cbRef.current?.(Date.now())
+        setNow(Date.now())
+        cbRef.current?.(Date.now())
 
-    const interval = setInterval(() => {
-      setNow(Date.now())
-      cbRef.current?.(Date.now())
-    }, updateInterval)
+        const interval = setInterval(() => {
+            setNow(Date.now())
+            cbRef.current?.(Date.now())
+        }, updateInterval)
 
-    return () => {
-      clearInterval(interval)
-    }
-  }, [updateInterval, enabled])
+        return () => {
+            clearInterval(interval)
+        }
+    }, [updateInterval, enabled])
 
-  return now
+    return now
 }
 
 export { useNow }

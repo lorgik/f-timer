@@ -1,31 +1,31 @@
 :root {
-  --color-primary: #595fe7;
-  --color-white: #fff;
-  --color-black: #172a35;
+    --color-primary: #595fe7;
+    --color-white: #fff;
+    --color-black: #172a35;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+    background-color: var(--color-primary);
+    color: var(--color-white);
 
-  transition: background-color 0.05s ease-in;
+    transition: background-color 0.05s ease-in;
 
-  &.yellow {
-    --color-primary: #ffb81a;
-  }
-  &.yellow {
-    --color-primary: #e32a40;
-  }
+    &.yellow {
+        --color-primary: #ffb81a;
+    }
+    &.yellow {
+        --color-primary: #e32a40;
+    }
 }
 
 button {
-  border: none;
-  cursor: pointer;
-  font-family: inherit;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
 }
