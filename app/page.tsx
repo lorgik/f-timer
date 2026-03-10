@@ -6,14 +6,7 @@ import Timer from '@/components/Timer/Timer'
 import styles from './page.module.scss'
 import Image from 'next/image'
 import { isValidTheme, Status, Theme, ThemeValue } from '@/types'
-
-const safeSetItem = (key: string, value: string): void => {
-    try {
-        localStorage.setItem(key, value)
-    } catch (e) {
-        console.warn('Failed to save to localStorage:', e)
-    }
-}
+import { safeSetItem } from '@/utils/safeSetItem'
 
 export default function Home() {
     const [status, setStatus] = useState<Status>('фокусировка')
